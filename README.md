@@ -64,7 +64,7 @@ O projeto implementa o fluxo completo de **cadastro → login → área logada**
 - **Interface:** JavaFX 21 + FXML
 - **Framework:** Spring Boot 3.x (`WebApplicationType.NONE`)
 - **Persistência:** Spring Data JPA / Hibernate
-- **Banco de dados:** MySQL 8 *(configuração alternativa para PostgreSQL comentada)*
+- **Banco de dados:** MySQL 8 
 - **Segurança:** `spring-security-crypto` (`BCryptPasswordEncoder`)
 - **Utilitários:** Lombok
 - **Build:** Maven

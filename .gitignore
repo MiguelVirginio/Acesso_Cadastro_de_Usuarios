@@ -1,26 +1,33 @@
+### Maven ###
 target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
-.kotlin
+
+.kotlin/
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+### Arquivos de ambiente ###
+.env
+.env.*
+!.env.example
 
 ### IntelliJ IDEA ###
-.idea/modules.xml
-.idea/jarRepositories.xml
-.idea/compiler.xml
-.idea/libraries/
+.idea/
 *.iws
 *.iml
 *.ipr
 
 ### Eclipse ###
-.apt_generated
+.apt_generated/
 .classpath
 .factorypath
 .project
-.settings
+.settings/
 .springBeans
-.sts4-cache
+.sts4-cache/
 
 ### NetBeans ###
 /nbproject/private/
@@ -28,9 +35,6 @@ target/
 /dist/
 /nbdist/
 /.nb-gradle/
-build/
-!**/src/main/**/build/
-!**/src/test/**/build/
 
 ### VS Code ###
 .vscode/
@@ -38,16 +42,10 @@ build/
 ### Mac OS ###
 .DS_Store
 
-# Arquivos de ambiente
-.env
-.env.local
-.env.*.local
+### Logs ###
+*.log
 
-# IDEs
-.idea/
-.vscode/
-*.iml
-
-# Build
-target/
-build/
+### Arquivos temporários ###
+*.tmp
+*.bak
+*.swp
