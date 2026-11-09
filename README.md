@@ -77,11 +77,11 @@ O projeto implementa o fluxo completo de **cadastro → login → área logada**
 
 ```mermaid
 flowchart LR
-    A[FXML<br/>Telas JavaFX] --> B[Controllers<br/>@Component]
-    B --> C[FuncionarioService<br/>@Service]
-    C --> D[FuncionarioRepository<br/>Spring Data JPA]
-    D --> E[(MySQL)]
-    C --> F[PasswordEncoder<br/>BCrypt]
+    A["FXML<br/>Telas JavaFX"] --> B["Controllers<br/>@Component"]
+    B --> C["FuncionarioService<br/>@Service"]
+    C --> D["FuncionarioRepository<br/>Spring Data JPA"]
+    D --> E["MySQL"]
+    C --> F["PasswordEncoder<br/>BCrypt"]
 ```
 
 ### Fluxo de navegação
