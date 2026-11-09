@@ -182,7 +182,7 @@ docker run -d \
   -e MYSQL_DATABASE=cadastroteste \
   -e MYSQL_USER=<usuario> \
   -e MYSQL_PASSWORD=<senha> \
-  -p 1112:3306 \
+  -p 3306:3306 \
   mysql:8
 ```
 
@@ -219,7 +219,7 @@ Configuração padrão em `src/main/resources/application.properties`:
 ```properties
 spring.docker.compose.enabled=false
 
-spring.datasource.url=jdbc:mysql://localhost:1112/cadastroteste
+spring.datasource.url=jdbc:mysql://localhost:3306/cadastroteste
 spring.datasource.username=<usuario>
 spring.datasource.password=<senha>
 spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
@@ -235,7 +235,7 @@ O Spring Boot converte variáveis de ambiente em propriedades automaticamente. A
 **Linux / macOS**
 
 ```bash
-export SPRING_DATASOURCE_URL="jdbc:mysql://localhost:1112/cadastroteste"
+export SPRING_DATASOURCE_URL="jdbc:mysql://localhost:3306/cadastroteste"
 export SPRING_DATASOURCE_USERNAME="seu_usuario"
 export SPRING_DATASOURCE_PASSWORD="sua_senha"
 ```
@@ -243,7 +243,7 @@ export SPRING_DATASOURCE_PASSWORD="sua_senha"
 **Windows (PowerShell)**
 
 ```powershell
-$env:SPRING_DATASOURCE_URL="jdbc:mysql://localhost:1112/cadastroteste"
+$env:SPRING_DATASOURCE_URL="jdbc:mysql://localhost:3306/cadastroteste"
 $env:SPRING_DATASOURCE_USERNAME="seu_usuario"
 $env:SPRING_DATASOURCE_PASSWORD="sua_senha"
 ```
@@ -283,23 +283,6 @@ Tabela **`funcionarios`**:
 
 > ⚠️ **Nunca versione credenciais reais.** Prefira variáveis de ambiente ou um arquivo `application-local.properties` listado no `.gitignore`.
 
----
-
-## 🗺️ Roadmap
-
-- [x] Cadastro de funcionários com validação
-- [x] Login com senha criptografada (BCrypt)
-- [x] Alternância de visibilidade da senha
-- [x] Tela de recuperação de senha (interface)
-- [ ] Envio real de link/código de recuperação por e-mail
-- [ ] Limite de tentativas de login *(já existe o alerta `mensagemDeExcessosDeTentativas`)*
-- [ ] Sessão do usuário logado e tela principal (dashboard)
-- [ ] CRUD completo de funcionários (listar, editar, excluir)
-- [ ] Perfis/permissões (admin, RH, colaborador)
-- [ ] Migrations com Flyway ou Liquibase (substituir `ddl-auto=update`)
-- [ ] Testes unitários e de integração (JUnit 5 + Testcontainers)
-- [ ] Empacotamento nativo com `jpackage` (instalador `.exe` / `.dmg` / `.deb`)
-- [ ] Validação de e-mail e política de senha mais fortes
 
 ---
 
@@ -337,6 +320,6 @@ Distribuído sob a licença **MIT**. Veja o arquivo `LICENSE` para mais informa�
 
 <div align="center">
 
-Desenvolvido por **Stilinsky** 💙
+Desenvolvido por **Stilinsky** 
 
 </div>
